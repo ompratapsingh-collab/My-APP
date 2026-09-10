@@ -16,8 +16,7 @@ This is my submission for the Round 2 Development Task. I've built a Flutter app
 
 ## Submission Deliverables
 - Codebase covering Futures, Streams, Widgets, and Navigation.
-- Screenshots are located in the `screenshots/` folder (see below).
-- You can watch my demo video here: [Link to Video]
+- **Screenshots & Demo Video**: You can view all screenshots and the full demo video in my (https://drive.google.com/drive/folders/1CbWGfb7Axy1r-o4rIQ_UFOFi_q82NjRp?usp=drive_link).
 - The compiled `.apk` file is available in the GitHub Releases section of this repository.
 
 *(Note: APK built via GitHub Actions)*
