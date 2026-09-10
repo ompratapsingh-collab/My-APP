@@ -11,8 +11,6 @@ class StreamScreen extends StatefulWidget {
 class _StreamScreenState extends State<StreamScreen> {
   int _counter = 0;
   StreamSubscription<int>? _subscription;
-  
-  // Creates a stream that emits a number every second
   Stream<int> _generateNumbers() async* {
     for (int i = 1; i <= 10; i++) {
       await Future.delayed(const Duration(seconds: 1));
@@ -25,7 +23,6 @@ class _StreamScreenState extends State<StreamScreen> {
       _counter = 0;
     });
     
-    // Cancel any existing subscription
     _subscription?.cancel();
     
     _subscription = _generateNumbers().listen(

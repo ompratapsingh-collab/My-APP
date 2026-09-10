@@ -17,7 +17,6 @@ class _FutureScreenState extends State<FutureScreen> {
       _data = 'Loading...';
     });
 
-    // Simulate network delay
     await Future.delayed(const Duration(seconds: 2));
 
     setState(() {

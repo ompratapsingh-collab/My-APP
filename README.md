@@ -1,53 +1,23 @@
 # Android Club Recruitment Task
 
-A Flutter application built for the Round 2 Development Task. This project demonstrates core Flutter concepts including Navigation, Futures, Streams, and the use of Stateless and Stateful widgets.
+This is my submission for the Round 2 Development Task. I've built a Flutter app that demonstrates the core concepts required, including Navigation, Futures, Streams, and different types of widgets.
 
-## Features Implemented
-- **Basic Navigation**: Routing between multiple screens (Home, Future Demo, Stream Demo).
-- **Futures**: Simulates a network request with a loading state and asynchronous data fetching.
-- **Streams**: Implements a data stream that yields a sequence of numbers over time, updating the UI dynamically.
-- **UI Development**: Clean, responsive user interface using standard Material widgets.
+## Features & Implementation
+- **Basic Navigation**: Built a simple routing setup to move between the Home screen, the Future Demo screen, and the Stream Demo screen.
+- **Futures**: I used a Stateful widget in `FutureScreen` with `Future.delayed` to simulate an asynchronous network request, complete with a loading state before the data shows up.
+- **Streams**: I created an `async*` generator function in `StreamScreen` that yields a sequence of numbers over time to show how to handle active data streams and subscriptions.
+- **Stateless vs Stateful Widgets**: The `HomeScreen` is Stateless as it just shows buttons, while the other two are Stateful to manage their dynamic data.
 
-## Concepts Demonstrated
-1. **Stateless vs Stateful Widgets**: `HomeScreen` is a Stateless widget since it only handles navigation, while `FutureScreen` and `StreamScreen` are Stateful widgets to manage dynamic data (`_isLoading`, `_data`, and `_counter`).
-2. **Futures**: Used in `FutureScreen` via `Future.delayed` to pause execution for 2 seconds before updating the state, mimicking an API call.
-3. **Streams**: Used in `StreamScreen` via an `async*` generator function that `yields` values. The UI listens to this stream using a `StreamSubscription`.
+## Setup Instructions
 
-## Project Setup & Usage
+1. Clone this repository to your machine.
+2. Run `flutter pub get` to install dependencies.
+3. Run the app using `flutter run` on your preferred emulator or connected device.
 
-### Prerequisites
-- Flutter SDK (>=3.0.0)
-- Dart SDK
+## Submission Deliverables
+- Codebase covering Futures, Streams, Widgets, and Navigation.
+- Screenshots are located in the `screenshots/` folder (see below).
+- You can watch my demo video here: [Link to Video]
+- The compiled `.apk` file is available in the GitHub Releases section of this repository.
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-url>
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd flutter_submission
-   ```
-3. Install dependencies:
-   ```bash
-   flutter pub get
-   ```
-4. Run the app:
-   ```bash
-   flutter run
-   ```
-
-## Automated APK Build (GitHub Actions)
-This repository is configured with a GitHub Action (`.github/workflows/build.yml`) that automatically builds the release `.apk` file whenever code is pushed to the `main` branch. 
-
-You can find the compiled APK in the **Actions** tab under artifacts, or in the **Releases** section if a tag is pushed.
-
-## Deliverables Checklist
-- [x] Flutter project with required concepts (Futures, Streams, Widgets, Navigation)
-- [x] Proper and well-structured README
-- [ ] Relevant screenshots (Please add these to a `/screenshots` folder and link them here)
-- [ ] Demo video (Please add a link to the video here)
-- [x] APK uploaded to Releases section (Use the GitHub Action output for this)
-
----
-*Note for submission: Add screenshots and video link before final submission.*
+*(Note: APK built via GitHub Actions)*
